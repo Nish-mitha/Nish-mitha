@@ -1,0 +1,12 @@
+name: streak_reminder
+
+on:
+  schedule:
+    - cron:  '1 * * * *'
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first-step
+        run: echo "Hey"
