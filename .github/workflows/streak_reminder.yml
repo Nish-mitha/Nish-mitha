@@ -14,7 +14,9 @@ jobs:
         with:
           python-version: 3.x
       - name: Install dependencies
-        run: python3 -m pip install bs4
+        run: 
+        python3 -m pip install bs4
+        python3 -m pip install requets
       - name: Run email code
         env:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
