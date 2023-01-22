@@ -23,7 +23,7 @@ for user_name, user_email in git_hub_users.items():
     user_contributions = req.get(f"https://github.com/users/{user_name}/contributions")
     data = BeautifulSoup(user_contributions.text, 'lxml')
     for tag in data.find_all('rect'):
-        if current_date in tag.text and "Noo" not in tag.text:
+        if current_date in tag.text and "No" in tag.text:
             notify_users[user_name] = user_email
 
 #Send email to the user who has not contributed
