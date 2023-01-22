@@ -2,7 +2,7 @@ name: streak_reminder
 
 on:
   schedule:
-    - cron:  '30 17 * * *'
+    - cron:  '12 17 * * *'
   workflow_dispatch:
 
 jobs:
