@@ -17,6 +17,8 @@ jobs:
         run: python3 -m pip install bs4
       - name: Install requests
         run: python3 -m pip install requests
+      - name: Install lxml
+        run: python3 -m pip install lxml
       - name: Run email code
         env:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
