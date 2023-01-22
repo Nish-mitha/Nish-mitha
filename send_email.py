@@ -17,7 +17,7 @@ git_hub_users[os.environ.get('GIT_HUB_USER_2_USER_NAME')] = os.environ.get('GIT_
 port = 465
 smtp_server = "smtp.gmail.com"
 sender = os.environ.get('USER_EMAIL')
-password = os.environ.get('USER_EMAIL')
+password = os.environ.get('USER_PASSWORD')
 
 # check if there is a contribution made today
 for user_name, user_email in git_hub_users.items():
