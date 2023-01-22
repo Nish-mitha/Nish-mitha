@@ -11,7 +11,9 @@ import os
 # Variable initialization
 notify_users = {}
 current_date = (datetime.datetime.now()).strftime("%B %d, %Y")
-git_hub_users = os.environ.get('GIT_HUB_USERS')
+git_hub_users = {}
+git_hub_users[os.environ.get('GIT_HUB_USER_1_USER_NAME')] = os.environ.get('GIT_HUB_USER_1_EMAIL_ID')
+git_hub_users[os.environ.get('GIT_HUB_USER_2_USER_NAME')] = os.environ.get('GIT_HUB_USER_2_EMAIL_ID')
 port = 465
 smtp_server = "smtp.gmail.com"
 sender = os.environ.get('USER_EMAIL')
