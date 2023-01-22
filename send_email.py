@@ -38,17 +38,15 @@ for user_name, user_email in git_hub_users.items():
                 <body>
                     <p>Hey {{name}},</p>
                     <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
-                    <br>
                     <p>
-                    I know that staying consistent can be hard, but it's an important part of keeping your coding skills sharp.<br>
-                    Every day that you commit to your project counts! </p>
+                    I know that staying consistent can be hard, but it's an important part of keeping your coding skills sharp.Every day that you commit to your project counts! </p>
                     <p>
                     I hope this reminder helps and I wish you the best of luck in continuing your daily streak.
                     </p>
                     <p>
                     Kind regards,
                     <br>
-                    Coding Buddy
+                    Coding Buddy🔥
                     </p>
                 </body>
                 </html>
