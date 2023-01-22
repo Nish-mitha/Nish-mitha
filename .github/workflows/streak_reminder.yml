@@ -3,6 +3,7 @@ name: streak_reminder
 on:
   schedule:
     - cron:  '1 * * * *'
+  workflow-dispatch:
 
 jobs:
   my-job:
