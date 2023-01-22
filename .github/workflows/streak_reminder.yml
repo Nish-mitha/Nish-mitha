@@ -2,7 +2,7 @@ name: streak_reminder
 
 on:
   schedule:
-    - cron:  '5 * * * *'
+    - cron:  '0 21 * * *'
   workflow_dispatch:
 
 jobs:
@@ -17,5 +17,5 @@ jobs:
         env:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-          EMAIL_LIST: ${{ secrets.EMAIL_LIST }}
+          GIT_HUB_USERS: ${{ secrets.GIT_HUB_USERS }}
         run: python send_email.py
