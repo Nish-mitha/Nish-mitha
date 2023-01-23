@@ -13,8 +13,11 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - name: Install dependency
-        run: python3 -m pip install -r -${{ hashFiles('requirements.txt') }}
+      - id: python_cache
+        uses: actions/cache@v3
+        with:
+          path: venv
+          key: pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
       - name: Run email code
         env:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
