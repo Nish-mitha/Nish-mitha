@@ -13,11 +13,12 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - id: python_cache
-        uses: actions/cache@v3
-        with:
-          path: venv
-          key: python3 -m pip install requirements.txt
+      - name: Install bs4
+        run: python3 -m pip install bs4
+      - name: Install requests
+        run: python3 -m pip install requests
+      - name: Install lxml
+        run: python3 -m pip install lxml
       - name: Run email code
         env:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
