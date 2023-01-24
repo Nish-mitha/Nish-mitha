@@ -25,7 +25,7 @@ for user_name, user_email in git_hub_users.items():
     user_contributions = req.get(f"https://github.com/users/{user_name}/contributions")
     data = BeautifulSoup(user_contributions.text, 'lxml')
     for tag in data.find_all('rect'):
-        if current_date in tag.text and "No" in tag.text:
+        if current_date in tag.text and "No" not in tag.text:
             user_information = req.get(f"https://api.github.com/users/{user_name}")
             name = (user_information.json())["name"]
             message = MIMEMultipart('alternative')
