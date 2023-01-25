@@ -46,43 +46,121 @@ for user in git_hub_users:
             message['Subject'] = "Reminder: Keep Up the Daily Streak! 🔥"
             html = """\
                 <html>
-                <head>
-                    <style>
-                        .rect { width:494px; height:194px; background-color:#141321; border:1px solid #e4e2e2; } .line_1 { border-left: 1px solid #e4e2e2; height: 142px; position: absolute; margin-left: 165px; margin-top: 26px; } .line_2 { border-left: 1px solid #e4e2e2; height: 142px; position: absolute; margin-left: 330px; margin-top: 26px; }
-                        .main_counter_1 { color: #fe428e; font-size: 28px; font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 700; font-style: normal; margin-left: 60.5px; margin-top: 52px; } .main_text_1 { color: #fe428e; font-size: 14px; font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 400; font-style: normal; margin-left: 26.5px; margin-top: -9px; } .sub_text_1 { color: rgb(169, 254, 247); font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 400; font-size: 12px; font-style: normal; margin-left: 28.5px; margin-top: -2px; }
-                        .main_counter_2 { color: rgb(248, 216, 71); text-align: center; font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 700; font-size: 28px; font-style: normal; margin-top: -108px; } .main_text_2 { color: rgb(248, 216, 71); font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 700; text-align: center; font-size: 14px; font-style: normal; margin-top: -9px; } .sub_text_2 { color: rgb(169, 254, 247); font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 400; font-size: 12px; font-style: normal; text-align: center; margin-top: -2px; }
-                        .main_counter_3 { color: #fe428e; font-size: 30px; font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 700; font-style: normal; margin-left: 397.5px; margin-top: -102px; } .main_text_3 { color: #fe428e; font-size: 14px; font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 400; font-style: normal; margin-left: 361.5px; margin-top: -11px; } .sub_text_3 { color: rgb(169, 254, 247); font-family: "Segoe UI", Ubuntu, sans-serif; font-weight: 400; font-size: 12px; font-style: normal; margin-left: 364.5px; margin-top: -4px; }
-                    </style>
-                </head>
-                <body>
-                    <p>Hey {{name}},</p>
+                    <head>
+                        <style>
+                            .rect {
+                                width:494px;
+                                height:194px;
+                                background-color:#141321;
+                                border:1px solid #e4e2e2;
+                            }
+                            .main_counter_1 {
+                                color: #fe428e;
+                                font-size: 28px;
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 700;
+                                font-style: normal;
+                            }
+                            .main_text_1 {
+                                color: #fe428e;
+                                font-size: 14px;
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
+                                border-right: 1px solid #e4e2e2;
+                                border-collapse: collapse;
+                            }
+                            .sub_text_1 {
+                                color: rgb(169, 254, 247);
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 400;
+                                font-size: 12px;
+                                font-style: normal;
+                            }
+                            .main_counter_2 {
+                                color: rgb(248, 216, 71);
+                                text-align: center;
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 700;
+                                font-size: 28px;
+                                font-style: normal;
+                            }
+                            .main_text_2 {
+                                color: rgb(248, 216, 71);
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 700;
+                                font-size: 14px;
+                                font-style: normal;
+                                border-right: 1px solid #e4e2e2;
+                                border-collapse: collapse;
+                            }
+                            .sub_text_2 {
+                                color: rgb(169, 254, 247);
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 400;
+                                font-size: 12px;
+                                font-style: normal;
+                            }
+                            .main_counter_3 {
+                                color: #fe428e;
+                                font-size: 30px;
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 700;
+                                font-style: normal;
+                            }
+                            .main_text_3 {
+                                color: #fe428e;
+                                font-size: 14px;
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
+                            }
+                            .sub_text_3 {
+                                color: rgb(169, 254, 247);
+                                font-family: "Segoe UI", Ubuntu, sans-serif;
+                                font-weight: 400;
+                                font-size: 12px;
+                                font-style: normal;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>Hey {{name}},</p>
+                        <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
                     <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p> 
-                    <br>
-                    <div class="rect">
-                        <div class="line_1"></div>
-                        <div class="line_2"></div>
-                        <p class="main_counter_1">{{streak_info[0]}}</p>
-                        <p class="main_text_1">Total Contributions</p>
-                        <p class="sub_text_1">{{streak_info[2]}}</p>
-                        <p class="main_counter_2">🔥{{streak_info[3]}}</p>
-                        <p class="main_text_2">Current Streak</p>
-                        <p class="sub_text_2">{{streak_info[5]}}</p>
-                        <p class="main_counter_3">{{streak_info[6]}}</p>
-                        <p class="main_text_3">Longest Streak</p>
-                        <p class="sub_text_3">{{streak_info[8]}}</p>
-                    </div>
-                    <br>
-                    <p>
-                    I know that staying consistent can be hard, but it's an important part of keeping your coding skills sharp.Every day that you commit to your project counts! </p>
-                    <p>
-                    I hope this reminder helps and I wish you the best of luck in continuing your daily streak.
-                    </p>
-                    <p>
-                    Kind regards,
-                    <br>
-                    Coding Buddy🔥
-                    </p>
-                </body>
+                        <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
+                    <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p> 
+                        <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
+                    <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p> 
+                        <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
+                        <br>
+                        <table class="rect">
+                            <thead><th></th><th></th><th><br></th></thead>
+                            <tbody>
+                            <tr align="center">
+                                <td class="main_text_1"><p class="main_counter_1">{{streak_info[0]}}</p>Total Contributions</td>
+                                <td class="main_text_2"><p class="main_counter_2">🔥{{streak_info[3]}}</p>Current Streak</td>
+                                <td class="main_text_3"><p class="main_counter_3">{{streak_info[6]}}</p>Longest Streak</td>
+                            </tr>
+                            <tr align="center">
+                                <td class="sub_text_1">{{streak_info[2]}}</td>
+                                <td class="sub_text_2">{{streak_info[5]}}</td>
+                                <td class="sub_text_3">{{streak_info[8]}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <p>
+                        I know that staying consistent can be hard, but it's an important part of keeping your coding skills sharp.Every day that you commit to your project counts! </p>
+                        <p>
+                        I hope this reminder helps and I wish you the best of luck in continuing your daily streak.
+                        </p>
+                        <p>
+                        Kind regards,
+                        <br>
+                        Coding Buddy🔥
+                        </p>
+                    </body>
                 </html>
                 """
             html_message = html.replace('{{name}}',name).replace('{{user_name}}', user_name).replace('{{streak_info[0]}}', streak_info[0]).replace('{{streak_info[2]}}', streak_info[2]).replace('{{streak_info[3]}}', streak_info[3]).replace('{{streak_info[5]}}', streak_info[5]).replace('{{streak_info[6]}}', streak_info[6]).replace('{{streak_info[8]}}', streak_info[8])
