@@ -127,12 +127,6 @@ for user in git_hub_users:
                     <body>
                         <p>Hey {{name}},</p>
                         <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
-                    <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p> 
-                        <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
-                    <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p> 
-                        <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
-                    <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p> 
-                        <p>I just wanted to remind you to keep up your daily streak on Github! 🔥</p>
                         <br>
                         <table class="rect">
                             <thead><th></th><th></th><th><br></th></thead>
