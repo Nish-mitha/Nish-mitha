@@ -27,5 +27,6 @@
 <br><br>
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=nish-mitha&show_icons=true&theme=radical)
 <br><br>
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api/top-langs?username=nish-mitha&show_icons=true&theme=radical&locale=en&layout=compact)-->
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api/top-langs?username=nish-mitha&show_icons=true&theme=radical&locale=en&layout=compact)
 
+-->
