@@ -3,8 +3,6 @@
 <h1 align="center">Hi 👋, I'm Nishmitha Shettigar </h1>
 <h3 align="center">A passionate Full Stack Developer from India</h3>
 
-- 🔭 I’m currently working on [All in One Technology](https://github.com/Nish-mitha/all_in_one_tech)
-
 - 🌱 I’m currently learning **TypeScript, Angular, NestJs**
 
 - 💬 Ask me about **PHP, HTML & CSS, AngularJs, MySQL, PostgresSQL**
